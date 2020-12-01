@@ -16,5 +16,17 @@ public class TemplateTest extends TestCase{
 		testEmail.addBcc("a@b.com");
 		assertEquals("a@b.com", testEmail.getBccAddresses().get(0).toString());
 	}
-
+	@Test
+	public void testAddBccNull() throws EmailException {
+		testEmail.addBcc("a@b.com");
+		assertEquals("a@b.com", testEmail.getBccAddresses().get(0).toString());
+		try {
+			String[] abc = null;
+			testEmail.addBcc(abc);
+			fail("An exception should be thrown!");
+		}catch(EmailException e) {
+			;//do nothing
+		}
+		
+	}
 }
