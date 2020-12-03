@@ -26,7 +26,7 @@ pipeline {
         }
         stage('Deliver') { 
             steps {
-                sh '/home/jorge/GitHub/CS4723-CS5123-Final-Project-commons-email-1.3.2-src/deliver.sh' 
+                sh './home/jorge/GitHub/CS4723-CS5123-Final-Project-commons-email-1.3.2-src/deliver.sh' 
             }
         }
     }
