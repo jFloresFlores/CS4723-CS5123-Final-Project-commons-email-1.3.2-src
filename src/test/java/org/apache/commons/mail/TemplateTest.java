@@ -19,7 +19,7 @@ public class TemplateTest extends TestCase{
 	
 	public void testAddBccNull() throws EmailException {
 
-		System.out.println("Function: testAddBccNull\n\t This test to see if the Bcc is of a null value. In other words to see if no Bcc was provided.");
+		System.out.println("Function: testAddBccNull UTSAID: gcoxxx\n\t This test to see if the Bcc is of a null value.");
 		testEmail.addBcc("a@b.com");
 		assertEquals("a@b.com", testEmail.getBccAddresses().get(0).toString());
 		try {
@@ -35,6 +35,8 @@ public class TemplateTest extends TestCase{
 
 	
 	public void testAddBccZero() throws EmailException {
+		System.out.println("Funtion: testAddBccZero UTSAID: gcoxxx\n\t This tests to see if nothing was inputed into the Bcc field.");
+
 		testEmail.addBcc("a@b.com");
 		assertEquals("a@b.com", testEmail.getBccAddresses().get(0).toString());
 		try {
